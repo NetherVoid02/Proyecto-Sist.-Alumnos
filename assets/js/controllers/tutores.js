@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const tbody = document.querySelector("#alumnosTable tbody");
+    const tbody = document.querySelector("#tabla-tutores tbody");
 
-    fetch("/alumnos")
+    fetch("/tutores")
         .then(res => res.json())
         .then(data => {
             data.forEach(tutor => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${tutor.Nombre}, ${tutor.Apellido.toUpperCase()}</td>
                     <td>${tutor.Dni}</td>
                     <td>${tutor.Cuil}</td>
-                    <td>${tutor.Telefono}</td>
+                    <td>${tutor.Telefono}</td>git 
                     <td></td>
                     <td>
                         <button class="ver-mas" onclick="mostrarModal()">Ver Mas</button>
