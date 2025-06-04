@@ -48,7 +48,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background: #0077a6;
+    background: #005aa3;
     border-bottom: 1px solid #000;
     position: relative;
     z-index: 100;
@@ -97,7 +97,7 @@ body {
   /* — Título centrado en su propia línea — */
 header > h1 {
     position: absolute;    /* sale del flujo flex */
-    top: 12%;
+    top: 32%;
     left: 50%;             /* punto medio del header */
     transform: translateX(-50%); /* lo centra exactamente */
     margin: 0;             /* elimina márgenes verticales */
@@ -117,7 +117,7 @@ nav {
   gap: 3rem;
   position: relative;
   padding: 1rem;
-  background: #0077a6;
+  background: #0371cc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -144,7 +144,7 @@ nav ul li a {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #0077a6;
+  background: #0371cc;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   flex-direction: row;
@@ -202,13 +202,43 @@ nav ul:nth-of-type(4):hover .megamenu {
   transform: scaleX(1);
 }
 
+
+/* Footer */
+
+.footer {
+  background-color: #005aa3;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.5rem;
+  color: #e6f2f7;
+}
+
+.footer-section p {
+  margin: 0.25rem 0;
+}
+
+
   /* ===== Contenido principal (iframe) ===== */
 
 
 main iframe#contenido {
   display: flex;
   flex-direction: column;
-  height: 84vh ;
+  height: 74vh ;
   width: 100%;
 }
   /* Iframe */

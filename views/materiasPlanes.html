@@ -8,22 +8,7 @@
 <!-- views/panel-alumnos-tabla.html -->
 <section class="panel-tabla-container">
 
-    <!-- Tabla cursos -->
-    <div class="tabla-wrapper">
-        <h3>Cursos</h3>
-        <table class="tabla-panel">
-            <tbody>
-                <tr onclick="mostrarModal(document.getElementById('modalCrearCurso'))">
-                    <td>Crear Curso</td>
-                </tr>
-                <tr onclick="mostrarModal(document.getElementById('modalModificarCurso'))">
-                    <td>Modificar Curso</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Tabla materias -->
+    <!-- Tabla de acciones de materias -->
     <div class="tabla-wrapper">
         <h3>Materias</h3>
         <table class="tabla-panel">
@@ -38,7 +23,7 @@
         </table>
     </div>
 
-    <!-- Tabla planes de estudio -->
+    <!-- Tabla de acciones de planes de estudio -->
     <div class="tabla-wrapper">
         <h3>Planes de estudio</h3>
         <table class="tabla-panel">
@@ -56,23 +41,13 @@
 
 <div class="container-busqueda">
   <select class="filtro selector-tabla" id="selector-tabla" onchange="cambiarTabla()">
-    <option value="cursos">Cursos</option>
     <option value="materias">Materias</option>
     <option value="planes">Planes</option>
   </select>
 
 
   <div class="buscador-container">
-    <input class="buscador" type="text" id="searchInput" placeholder="Buscar alumno..." />
-  </div>
-
-  <div class="filtro-container">
-    <select class="filtro" id="grado">
-      <option value="">Todos</option>
-      <option value="1°">1°</option>
-      <option value="2°">2°</option>
-      <option value="3°">3°</option>
-    </select>
+    <input class="buscador" type="text" id="searchInput" placeholder="Buscar" />
   </div>
 </div>
 

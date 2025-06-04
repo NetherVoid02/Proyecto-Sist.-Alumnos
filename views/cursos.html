@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/matriz.css">
+<link rel="stylesheet" href="/assets/css/modal.css">
+<link rel="stylesheet" href="/assets/css/btn.css">
+<link rel="stylesheet" href="/assets/css/tablas.css">
+<link rel="stylesheet" href="../assets/css/paneles.css">
+
+<!-- views/panel-alumnos-tabla.html -->
+<section class="panel-tabla-container">
+
+    <!-- Tabla de acciones de cursos -->
+    <div class="tabla-wrapper">
+        <h3>Cursos</h3>
+        <table class="tabla-panel">
+            <tbody>
+                <tr onclick="mostrarModal(document.getElementById('modalCrearCurso'))">
+                    <td>Crear Curso</td>
+                </tr>
+                <tr onclick="mostrarModal(document.getElementById('modalModificarCurso'))">
+                    <td>Modificar Curso</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div class="container-busqueda">
+    <div class="buscador-container">
+        <input class="buscador" type="text" id="searchInput" placeholder="Buscar curso" />
+    </div>
+</div>
+
+<!--  Tabla cursos  -->
+<table id="tabla-cursos" class="tabla">
+    <thead>
+        <tr>
+        <th>Id Curso</th>
+        <th>Curso</th>
+        <th>Plan</th>
+        <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--  Se rellena la tabla desde la DB  -->
+    </tbody>
+</table>

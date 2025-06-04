@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${alumno.Legajo}</td>
                     <td></td>
                     <td>
-                        <button onclick="mostrarModal(document.getElementById('modalAlumno'))">Abrir Modal Alumno</button>
+                        <button onclick="mostrarModal(document.getElementById('modalAlumno'))">Detalles</button>
+                        <button onclick="mostrarModal(document.getElementById('modalTutores'))">Ver Tutores</button>
                     </td>
                 `
 
