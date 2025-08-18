@@ -21,6 +21,7 @@ window.addEventListener('click', function (event) {
   });
 });
 
+
 // Cierra el modal al presionar la tecla Escape
 window.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
@@ -29,3 +30,9 @@ window.addEventListener('keydown', function (event) {
     });
   }
 });
+
+//cierra los modales con solo poner la id del modal
+function cerrarModalPorId(idModal) {
+    const modal = document.getElementById(idModal);
+    cerrarModal(modal);
+}

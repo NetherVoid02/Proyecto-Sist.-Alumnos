@@ -16,7 +16,7 @@ function togglePassword() {
 function cargarVista(pagina) {
   const iframe = document.getElementById("contenido");
 
-  // Si ya tiene clase de animación, la quitamos
+  // Saca las clases de animacion en caso de que las tenga
   iframe.classList.remove("fade");
   iframe.classList.add("fade-out");
 
@@ -30,26 +30,32 @@ function cargarVista(pagina) {
   }, 200); // debe coincidir con la duración de fadeOut en CSS
 }
 
-
-
-document.getElementById("menu-toggle").addEventListener("DOMContentLoaded", function () {
-    document.getElementById("nav-menu").classList.toggle("active");
-});
-
-// Alternativa del toggle para otra parte del menú (por si se usa en otro contexto)
-const btn = document.getElementById('menu-toggle');
-const nav = document.querySelector('header nav');
-
-btn.addEventListener('click', () => {
-    nav.classList.toggle('show');
-});
-
 const iframe = document.getElementById("contenido");
 
 iframe.addEventListener("load", () => {
-    iframe.classList.remove("fade");
+  // Elimina clase de animación si existe
+  iframe.classList.remove("fade");
 
-    void iframe.offsetWidth;
+  // Fuerza el reflow
+  void iframe.offsetWidth;
 
-    iframe.classList.add("fade")
-})
+  // Vuelve a agregar la clase para que se reinicie la animación
+  iframe.classList.add("fade");
+
+  // Ajusta la altura del iframe automáticamente al contenido cargado
+  try {
+    const contenido = iframe.contentDocument?.documentElement;
+    if (contenido) {
+      iframe.style.height = contenido.scrollHeight + "px";
+    }
+  } catch (e) {
+    console.warn("No se pudo acceder al contenido del iframe para ajustar la altura:", e);
+  }
+});
+
+window.addEventListener("message", (event) => {
+  if (event.data?.tipo === "ajustarAltura" && typeof event.data.altura === "number") {
+    iframe.style.height = event.data.altura + "px";
+  }
+});
+

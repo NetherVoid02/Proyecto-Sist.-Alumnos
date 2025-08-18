@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="min-h-screen bg-gray-50">
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-sm border p-6">
+                    <h1 class="text-2xl font-bold text-gray-900 mb-2">Administración de Usuarios</h1>
+                    <p class="text-gray-600">Gestión de usuarios del sistema, roles, permisos y configuración de
+                        contraseñas.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                        <div class="p-6 text-center">
+                            <img src="/estilos escuela/user-new(+).svg" alt=""
+                                class="lucide lucide-user-plus h-12 w-12 text-blue-600 mx-auto mb-3">
+                            <h3 class="font-semibold text-gray-900 mb-2">Crear Usuario</h3>
+                            <p class="text-sm text-gray-600">Alta de nuevos usuarios con roles</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                        <div class="p-6 text-center">
+                            <img src="/estilos escuela/modifyUser.svg" alt=""
+                                class="lucide lucide-settings h-12 w-12 text-green-600 mx-auto mb-3">
+                            <h3 class="font-semibold text-gray-900 mb-2">Modificar Usuario</h3>
+                            <p class="text-sm text-gray-600">Actualizar datos y permisos</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                        <div class="p-6 text-center">
+                            <img src="/estilos escuela/shieldRed.svg" alt=""
+                                class="lucide lucide-lock h-12 w-12 text-yellow-600 mx-auto mb-3">
+                            <h3 class="font-semibold text-gray-900 mb-2">Gestionar Permisos</h3>
+                            <p class="text-sm text-gray-600">Roles y accesos del sistema</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-users h-5 w-5 mr-2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>Usuarios por Rol</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center"><span
+                                        class="text-gray-600">Administradores:</span><span
+                                        class="font-semibold bg-red-100 text-red-800 px-2 py-1 rounded">3</span>
+                                </div>
+                                <div class="flex justify-between items-center"><span
+                                        class="text-gray-600">Docentes:</span><span
+                                        class="font-semibold bg-green-100 text-green-800 px-2 py-1 rounded">45</span>
+                                </div>
+                                <div class="flex justify-between items-center"><span
+                                        class="text-gray-600">Estudiantes:</span><span
+                                        class="font-semibold bg-blue-100 text-blue-800 px-2 py-1 rounded">423</span>
+                                </div>
+                                <div class="flex justify-between items-center"><span class="text-gray-600">Personal
+                                        Administrativo:</span><span
+                                        class="font-semibold bg-purple-100 text-purple-800 px-2 py-1 rounded">8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-key h-5 w-5 mr-2">
+                                    <path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"></path>
+                                    <path d="m21 2-9.6 9.6"></path>
+                                    <circle cx="7.5" cy="15.5" r="5.5"></circle>
+                                </svg>Seguridad de Contraseñas</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="space-y-4">
+                                <div class="p-3 bg-yellow-50 border border-yellow-200 rounded">
+                                    <div class="font-medium text-yellow-800">Próximas a Vencer</div>
+                                    <div class="text-sm text-yellow-600">12 usuarios deben cambiar contraseña</div>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-medium text-gray-900">Requisitos de Contraseña:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Mínimo una mayúscula</li>
+                                        <li>• Mínimo una minúscula</li>
+                                        <li>• Un número (no consecutivo)</li>
+                                        <li>• Un carácter especial</li>
+                                        <li>• Cambio cada 6 meses</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>
